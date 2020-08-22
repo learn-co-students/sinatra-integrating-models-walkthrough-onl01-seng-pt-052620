@@ -1,9 +1,11 @@
 <h1>Your Text Analysis</h1>
 
-<h2>Number of Words: </h2>
+<h2>Number of Words: <%= @user_text.count_of_words %></h2>
 
-<h2>Vowels: </h2>
+<h2>Vowels: <%= @user_text.count_of_vowels %> </h2>
 
-<h2>Consonants: </h2>
+<h2>Consonants: <%= @user_text.count_of_consonants %> </h2>
+<%text_array = @user_text.most_used_letter%>
 
-<h2>Most Common Letter: _____ used _____ times</h2>
+<h2>Most Common Letter: <%=text_array.flatten[0].upcase%>, used <%=text_array.flatten[1]%> times.</h2>
+ 
